@@ -70,14 +70,13 @@ public class Main {
                     while (true) {
                         System.out.println();
                         System.out.println("1.Search\n" +
-                                "2.Add Photos\n" +
-                                "3.View Received Requests\n" +
-                                "4.View Sent Request\n" +
-                                "5.View Following\n" +
-                                "6.View Followers\n" +
-                                "7.Log out\n");
+                                "2.View Received Requests\n" +
+                                "3.View Sent Request\n" +
+                                "4.View Following\n" +
+                                "5.View Followers\n" +
+                                "6.Log out\n");
                         int userChoice = input.nextInt();
-                        if (userChoice == 7) {
+                        if (userChoice == 6) {
                             guestUser = existingUser.logout();
                             System.out.println(guestUser);
                             break;
@@ -101,22 +100,22 @@ public class Main {
 
                             break;
 
-                            case 4: {
-                                existingUser.viewSentRequests();
-                            }
-                            break;
-
-                            case 3: {
+                            case 2: {
                                 existingUser.viewRecievedRequests();
                             }
                             break;
 
-                            case 5: {
+                            case 3: {
+                                existingUser.viewSentRequests();
+                            }
+                            break;
+
+                            case 4: {
                                 existingUser.viewFollowings();
                             }
                             break;
 
-                            case 6: {
+                            case 5: {
                                 existingUser.viewFollowers();
                             }
                             break;
